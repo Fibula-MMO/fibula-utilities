@@ -12,7 +12,7 @@
 namespace Fibula.Utilities.Pathfinding
 {
     using System.Collections.Generic;
-    using Fibula.Common.Utilities;
+    using Fibula.Utilities.Common;
     using Fibula.Utilities.Common.Extensions;
     using Fibula.Utilities.Pathfinding.Abstractions;
     using Fibula.Utilities.Pathfinding.Extensions;

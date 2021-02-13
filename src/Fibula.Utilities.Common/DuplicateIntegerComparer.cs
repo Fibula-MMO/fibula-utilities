@@ -9,7 +9,7 @@
 // </copyright>
 // -----------------------------------------------------------------
 
-namespace Fibula.Common.Utilities
+namespace Fibula.Utilities.Common
 {
     using System.Collections;
     using System.Collections.Generic;

@@ -9,7 +9,7 @@
 // </copyright>
 // -----------------------------------------------------------------
 
-namespace Fibula.Common.TestingUtilities
+namespace Fibula.Utilities.Testing
 {
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;

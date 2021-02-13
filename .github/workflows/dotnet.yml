@@ -39,6 +39,6 @@ jobs:
     - name: Publish Fibula.Utilities.Pathfinding Package
       run: dotnet nuget push "src/Fibula.Utilities.Pathfinding/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Publish Jarbit.Utilities.Validation Package
-      run: dotnet nuget push "src/Jarbit.Utilities.Validation/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}            
+    - name: Publish Fibula.Utilities.Validation Package
+      run: dotnet nuget push "src/Fibula.Utilities.Validation/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}            
       

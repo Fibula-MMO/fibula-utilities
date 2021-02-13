@@ -41,4 +41,6 @@ jobs:
 
     - name: Publish Fibula.Utilities.Validation Package
       run: dotnet nuget push "src/Fibula.Utilities.Validation/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}            
-      
+
+    - name: Publish Fibula.Utilities.Testing Package
+      run: dotnet nuget push "src/Fibula.Utilities.Testing/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}            

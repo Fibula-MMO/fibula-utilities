@@ -6,8 +6,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DebugType>full</DebugType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<OutputType>Library</OutputType>
-	<IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>

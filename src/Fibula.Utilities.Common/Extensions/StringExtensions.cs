@@ -42,7 +42,7 @@ namespace Fibula.Utilities.Common.Extensions
         /// <param name="str">The string from which to retrieve the enclosured strings.</param>
         /// <param name="openClosePairs">A collection of open and close characters between which to look for enclosed strings.</param>
         /// <returns>A collection of enclosed string contained in the string.</returns>
-        public static IEnumerable<string> GetEnclosedStrings(this string str, IEnumerable<(char openChar, char closeChar)> openClosePairs)
+        public static IEnumerable<string> GetEnclosedStrings(this string str, IEnumerable<(char OpenChar, char CloseChar)> openClosePairs)
         {
             var stack = new Stack<string>();
 
@@ -67,13 +67,13 @@ namespace Fibula.Utilities.Common.Extensions
 
                 var c = str[i];
 
-                if (inQuote || !openClosePairs.Any(t => t.openChar == c || t.closeChar == c))
+                if (inQuote || !openClosePairs.Any(t => t.OpenChar == c || t.CloseChar == c))
                 {
                     buffers.Peek().Append(c);
                     continue;
                 }
 
-                var (openChar, closeChar) = openClosePairs.Single(t => t.openChar == c || t.closeChar == c);
+                var (openChar, closeChar) = openClosePairs.Single(t => t.OpenChar == c || t.CloseChar == c);
 
                 if (openChar == c)
                 {
@@ -110,7 +110,7 @@ namespace Fibula.Utilities.Common.Extensions
         /// <param name="inputStr">The string to trim the pairs from.</param>
         /// <param name="openClosePairs">The collection of open and close pairs.</param>
         /// <returns>The resulting string after trim.</returns>
-        public static string TrimEnclosures(this string inputStr, IEnumerable<(char openChar, char closeChar)> openClosePairs)
+        public static string TrimEnclosures(this string inputStr, IEnumerable<(char OpenChar, char CloseChar)> openClosePairs)
         {
             foreach (var (openChar, closeChar) in openClosePairs)
             {

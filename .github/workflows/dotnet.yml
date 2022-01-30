@@ -35,6 +35,9 @@ jobs:
     - name: Test
       run: dotnet test src
 
+    - name: Publish Fibula.Utilities.CommandLine Package
+      run: dotnet nuget push "src/Fibula.Utilities.CommandLine/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
+
     - name: Publish Fibula.Utilities.Common Package
       run: dotnet nuget push "src/Fibula.Utilities.Common/bin/Release/*.nupkg" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
 

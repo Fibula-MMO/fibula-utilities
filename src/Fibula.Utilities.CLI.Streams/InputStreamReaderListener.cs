@@ -9,20 +9,26 @@
 // </copyright>
 // -----------------------------------------------------------------
 
-namespace Fibula.Utilities.CommandLine
+namespace Fibula.Utilities.CLI.Streams
 {
     using System;
     using System.IO;
     using System.Threading;
     using System.Threading.Tasks;
+    using Fibula.Utilities.CLI;
     using Fibula.Utilities.Validation;
     using Microsoft.Extensions.Hosting;
 
     /// <summary>
     /// Class that implements a stream reader that constantly monitors a stream and raises events when a new line is read.
     /// </summary>
-    public class InputStreamReaderListener : IInputReader, IHostedService
+    public class InputStreamReaderListener : IInputListener, IHostedService
     {
+        /// <summary>
+        /// The stream that the reader is hooked up to.
+        /// </summary>
+        private readonly Stream stream;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InputStreamReaderListener"/> class.
         /// </summary>
@@ -31,25 +37,20 @@ namespace Fibula.Utilities.CommandLine
         {
             Validate.ThrowIfNull(stream);
 
-            this.Stream = stream;
+            this.stream = stream;
         }
 
         /// <summary>
         /// Event raised when the reader has read a new line.
         /// </summary>
-        public event NewLineReadHandler NewLineRead;
-
-        /// <summary>
-        /// Gets the stream that the reader is hooked up to.
-        /// </summary>
-        public Stream Stream { get; }
+        public event NewInputReadyHandler NewLineRead;
 
         /// <inheritdoc/>
         public Task StartAsync(CancellationToken cancellationToken)
         {
             Validate.ThrowIfNull(cancellationToken);
 
-            var streamReader = new StreamReader(this.Stream);
+            var streamReader = new StreamReader(this.stream);
 
             Task.Run(
                 async () =>

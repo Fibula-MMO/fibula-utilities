@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Fibula.Utilities.Validation</PackageId>
+    <PackageId>Fibula.Utilities.CLI</PackageId>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>2020</Copyright>
@@ -19,18 +19,11 @@
     <PackageProjectUrl>https://fibula-mmo.github.io/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Fibula-MMO/fibula-utilities</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <Version>1.1.0</Version>
+    <Version>0.0.1</Version>
     <NeutralLanguage>en</NeutralLanguage>
-    <Description>Assorted utilities for validation in the Fibula project.</Description>
+    <Description>Contains contracts of utilities for CLI, used in the Fibula project.</Description>
   </PropertyGroup>
   
-  <ItemGroup>
-    <Compile Remove="BinaryHeap.cs" />
-    <Compile Remove="BytePair.cs" />
-    <Compile Remove="Extensions\ByteExtensions.cs" />
-    <Compile Remove="Extensions\FlagExtensions.cs" />
-  </ItemGroup>
-
   <ItemGroup>
     <None Remove="stylecop.json" />
   </ItemGroup>
@@ -44,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -51,7 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fibula.Utilities.Common\Fibula.Utilities.Common.csproj" />
+    <ProjectReference Include="..\Fibula.Utilities.Validation\Fibula.Utilities.Validation.csproj" />
   </ItemGroup>
 
 </Project>

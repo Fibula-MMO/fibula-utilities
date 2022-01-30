@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Fibula.Utilities.CommandLine</PackageId>
+    <PackageId>Fibula.Utilities.CLI.Streams</PackageId>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>2020</Copyright>
@@ -21,7 +21,7 @@
     <RepositoryType>GitHub</RepositoryType>
     <Version>0.0.1</Version>
     <NeutralLanguage>en</NeutralLanguage>
-    <Description>Some utilities for the CLI used in the Fibula project.</Description>
+    <Description>A utility to enable CLI from streams, used in the Fibula project.</Description>
   </PropertyGroup>
   
   <ItemGroup>

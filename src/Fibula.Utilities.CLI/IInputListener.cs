@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------
-// <copyright file="IInputReader.cs" company="The Fibula Project">
+// <copyright file="IInputListener.cs" company="The Fibula Project">
 // Copyright (c) | The Fibula Project.
 // https://github.com/orgs/fibula-mmo/people
 //
@@ -9,16 +9,16 @@
 // </copyright>
 // -----------------------------------------------------------------
 
-namespace Fibula.Utilities.CommandLine
+namespace Fibula.Utilities.CLI
 {
     /// <summary>
-    /// Interface for a reader that intends to read from a given input.
+    /// Interface for a listener for input.
     /// </summary>
-    public interface IInputReader
+    public interface IInputListener
     {
         /// <summary>
-        /// Event raised when the reader has read a new line.
+        /// Event raised when the listener has new input available.
         /// </summary>
-        event NewLineReadHandler NewLineRead;
+        event NewInputReadyHandler NewLineRead;
     }
 }

@@ -6,6 +6,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DebugType>full</DebugType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <OutputPath>..\..\bin\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup>

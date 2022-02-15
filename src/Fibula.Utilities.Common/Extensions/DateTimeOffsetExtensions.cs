@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------
-// <copyright file="TimeSpanExtensions.cs" company="2Dudes">
+// <copyright file="DateTimeOffsetExtensions.cs" company="2Dudes">
 // Copyright (c) | Jose L. Nunez de Caceres et al.
 // https://linkedin.com/in/nunezdecaceres
 //
